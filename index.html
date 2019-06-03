@@ -5,14 +5,14 @@
 	<meta charset="UTF-8">
 	<meta id="m640" name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>Document</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link
-		href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Lato:400,700|Nunito:400,800|Quicksand:300,400,700|Raleway:400,600|Sintony:400,700"
-		rel="stylesheet">
-
+	href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Lato:400,700|Nunito:400,800|Quicksand:300,400,700|Raleway:400,600|Sintony:400,700"
+	rel="stylesheet">
+	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="CSS/style.css">
+	<title>Document</title>
 </head>
 
 <body>
@@ -273,19 +273,41 @@
 	<section class="comment">
 		<div class="container">
 			<div class="our-client__comment">
-				<div class="our-client__comment-photos">
-					<img src="img/chitata-1.png" alt="" class="our-client__comment-photo">
+				<div class="our-client__comment-content slider-text">
+					<div class="slider-text__item">
+							<div class="our-client__comment-photos">
+								<img src="img/chitata-1.png" alt="" class="our-client__comment-photo">
+							</div>
+							<p class="plus__text our-client__comment-text">
+								This is due to their exelent service, company
+								pricing and customer support.it,s throughty
+								refresing to get such a personal touch.</p>
+							<p class="plus__text our-client__comment-p">- Zahir Hasan.</p>
+					</div>
+					<div class="slider-text__item">
+							<div class="our-client__comment-photos">
+								<img src="img/chitata-2.png" alt="" class="our-client__comment-photo">
+							</div>
+							<p class="plus__text our-client__comment-text">
+									Your leadership skills make it easy for you to manage our team, even with our diverse professional background.</p>
+							<p class="plus__text our-client__comment-p">- Zahir Hasan.</p>
+					</div>
+					<div class="slider-text__item">
+							<div class="our-client__comment-photos">
+								<img src="img/chitata-3.png" alt="" class="our-client__comment-photo">
+							</div>
+							<p class="plus__text our-client__comment-text">
+									We would like to say that you’re the best boss we could ever have dreamed of working with. Thank you for your support and inspiration!</p>
+							<p class="plus__text our-client__comment-p">- Zahir Hasan.</p>
+					</div>
+					
 				</div>
-				<div class="our-client__comment-content">
-					<p class="plus__text our-client__comment-text">This is due to their exelent service, company
-						pricing and customer support.it,s throughty
-						refresing to get such a personal touch.</p>
-					<i class="fas fa-quote-right"></i>
-					<p class="plus__text our-client__comment-p">- Zahir Hasan.</p>
-				</div>
+				<i class="fas fa-quote-right"></i>
 				<div class="our-client__comment-bottom">
-				
-				</div>
+					
+					<i class="fa fa-arrow-left our-client__icon fa-4x client-arrow-left"></i>
+					<i class="fa fa-arrow-right our-client__icon fa-4x client-arrow-right"></i>
+									</div>
 			</div>
 		</div>
 	</section>
@@ -514,10 +536,19 @@
 			</div>
 		</div>
 	</footer>
-	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 	<script src="js/mailn.js"></script>
+	<script src="js/slick.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.slider-text').slick({
+				prevArrow: $('.client-arrow-left'),
+				nextArrow: $('.client-arrow-right')
+			});
+		});
+	</script>
 </body>
 
 </html>

@@ -631,6 +631,21 @@ a {
 	bottom: 2%;
 }
 
+.our-client__comment-bottom {
+	margin-top: 50px;
+}
+
+.our-client__icon {
+	margin-left: 10px;
+	
+}
+
+.our-client__comment-photo {
+	width: 60px;
+	height: 60px;
+	margin: auto;
+}
+
 /*Седьмой экран*/
 
 .blog {
@@ -1175,11 +1190,13 @@ input {
 		margin: 0 auto;
 		display: flex;
 		flex-direction: column;
+		
 	}
 
 	.our-projects__photos img {
 		margin: 0 auto;
 		margin-bottom: 20px;
+		width: 100%;
 	}
 
 	.our-client {
