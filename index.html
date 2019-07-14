@@ -21,18 +21,19 @@
 	<header>
 		<div class="section-top">
 			<div class="container d-flex justify-between">
-				<div class="contact ">
+				<div class="contact displ-none">
 					<i class="fa fa-map-marker-alt"></i>
-					<p class="raleway">333 Road Broken Street</p>
+					<p class="raleway ">333 Road Broken Street</p>
 				</div>
 				<div class="contact contact-1">
 					<i class="fa fa-phone"></i>
 					<p class="raleway">1-785-452-4521</p>
 				</div>
-				<div class="contact dis-none">
+				<div class="contact disp-none">
 					<i class="fa fa-clock"></i>
 					<p class="raleway">Mon - Sat 8.00am - 6.00pm</p>
 				</div>
+				
 				<div class="contact network dis-none">
 					<a href="#"><i class="fab fa-twitter"></i></a>
 					<a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -103,7 +104,7 @@
 					<p class="nav-li about__text">The best House cleaning Company</p>
 					<h2 class="about-title">About Our Moura's
 						Company</h2>
-					<h2 class="about-desk">We Specialize in window cleaning window tinting
+					<h2 class="about-desk about-desk-mobile">We Specialize in window cleaning window tinting
 						pressure washing gutter cleaning and more. We are
 						dedicated to improving the look and value of homes
 						and samll business in their communites.</h2>
@@ -408,12 +409,12 @@
 					<p class="nav-li about__text book__text">Book Service Today</p>
 					<h2 class="about-title book__title">Get a Free Quote</h2>
 					<div class="book-desk__content">
-						<form action="" class="d-flex">
-							<input type="text" class="" placeholder="Your Name">
-							<input type="e-mail" class="" placeholder="Email Address">
-							<input type="text" class="" placeholder="Phone Number">
+						<form action="" class="d-flex" id="quote-form">
+							<input type="text" name="username" required placeholder="Your Name">
+							<input type="e-mail" name="email" required placeholder="Email Address">
+							<input type="tel" name="phone" required placeholder="Phone Number">
+							<button class="button book__button button-text">Submite Now</button>
 						</form>
-						<button class="button book__button button-text">Submite Now</button>
 					</div>
 				</div>
 				<!-- </about-content> -->
@@ -435,15 +436,15 @@
 		<div class="container footer-content d-flex">
 			<div data-wow-delay="0.4s" class="contact footer__item wow fadeInLeft ">
 				<i class="fa fa-map-marker-alt icon-footer"></i>
-				<p class="raleway">333 Road Broken Street,88 New York</p>
+				<p class="raleway  ">333 Road Broken Street,88 New York</p>
 			</div>
 			<div data-wow-delay="0.4s" class="contact footer__item wow fadeInUp">
 				<i class="fa fa-phone icon-footer"></i>
-				<p class="raleway">1-785-452-4521</p>
+				<p class="raleway small-raleway">1-785-452-4521</p>
 			</div>
 			<div data-wow-delay="0.4s" class="contact footer__item wow fadeInRight">
 				<i class="fa fa-clock icon-footer"></i>
-				<p class="raleway">Mon - Sat 8.00am - 6.00pm</p>
+				<p class="raleway ">Mon - Sat 8.00am - 6.00pm</p>
 			</div>
 		</div>
 	</footer>
@@ -542,18 +543,33 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 	<script src="js/mailn.js"></script>
 	<script src="js/slick.js"></script>
+	<script src="js/jquery.validate.min.js"></script>
 	<script>
 		$(document).ready(function() {
+			// Поключение validate 
+			$('#quote-form').validate({
+				rules: {
+					username: "required",
+					email:{
+						requred: true,
+						email: true,
+					},
+					phone: "required"
+				}
+
+			});
+
+
+			// Подключение слайдера
 			$('.slider-text').slick({
 				prevArrow: $('.client-arrow-left'),
-				nextArrow: $('.client-arrow-right')
+				nextArrow: $('.client-arrow-right'),
+				
 			});
 		});
 	</script>
 	<script src="js/wow.min.js"></script>
-	<script>
-		new WOW().init();
-	</script>
+	
 </body>
 
 </html>

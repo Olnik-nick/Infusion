@@ -13,18 +13,7 @@ $('.button[filter]').click(function () {
       }
    });	
 
-$('.menu-iconn').click(function() {
-   $('nav').slideToggle(500);
-   $('ul').css({
-      'display': 'flex',
-      'flex-direction': 'column'
-   })
-   if($('.menu-iconn').html()=='<i class="fa fa-bars"></i>') {
-         $(this).html('<i class="fas fa-times"></i>')
-      } else {
-         $(this).html('<i class="fa fa-bars"></i>')
-      }
-   })
+
 
 $(window).scroll(function () {
       if ($(this).scrollTop() != 0)
@@ -47,6 +36,21 @@ $(window).scroll(function () {
    });
 
 });
+
+
+
+$('.menu-iconn').click(function() {
+   $('nav').slideToggle(500);
+   $('.nav').css({
+      'display': 'flex',
+      'flex-direction': 'column'
+   })
+   if($('.menu-iconn').html()=='<i class="fa fa-bars"></i>') {
+         $(this).html('<i class="fas fa-times"></i>')
+      } else {
+         $(this).html('<i class="fa fa-bars"></i>')
+      }
+   })
 
 
 
